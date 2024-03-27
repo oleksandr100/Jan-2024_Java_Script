@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    // - Знайти та вивести довижину настипних стрінгових значень
+    // 'hello world', 'lorem ipsum', 'javascript is cool'
+    const Slongs = ['hello world', 'lorem ipsum', 'javascript is cool'];
+    for (const Slong of Slongs){
+        console.log(Slong.toUpperCase())
+    }
+
+    // - Перевести до великого регістру наступні стрінгові значення
+    // 'hello world', 'lorem ipsum', 'javascript is cool'
+     let words = ['hello world','lorem ipsum','javascript is cool']
+    for (const word of words){
+    console.log(word.toUpperCase())}
+
+    // - Перевести до нижнього регістру настипні стрінгові значення
+       let words1 = ['HELLO WORLD', 'LOREM IPSUM', 'JAVASCRIPT IS COOL']
+    for (const word0 of words1){
+        console.log(word0.toLowerCase())
+    }
+
+
+    // - Є "брудна" стрінга let str = ' dirty string   ' . Почистити її від зайвих пробілів.
+    // let str =  ' dirty string   ';
+    // const GGstr = str.trim();
+    // console.log(GGstr)
+    //
+
+    // - Напишіть функцію stringToarray(str), яка перетворює рядок на масив слів.
+    //      let str = 'Ревуть воли як ясла повні';
+    //      let arr = stringToarray(str); ['Ревуть', 'воли', 'як', 'ясла', 'повні']
+
+    function stringToarray(str1) {
+        return str1.split('');
+
+    }
+    let str1 = 'Ревуть воли як ясла повні';
+         let arr = stringToarray(str1);
+         console.log(arr)
+    //
+    // - є масив чисел [10,8,-7,55,987,-1011,0,1050,0] . за допомоги map  перетворити всі об'єкти в масиві на стрінгові.
+
+    console.log([10,8,-7,55,987,-1011,0,1050,0].map(value => value + ''))
+    // - створити функцію sortNums(direction), яка прймає масив чисел, та сортує його від більшого до меньшого, або навпаки в залежності від значення аргументу direction.
+    //     let nums = [11,21,3];
+
+    // sortNums(nums,'ascending') // [3,11,21]
+
+    let nums = [11 ,21 ,3 ];
+    let sortNums1 =(ccc) => ccc.sort((a, b) => a - b)
+    let NSS = sortNums1(nums);
+    console.log(NSS)
+    // sortNums(nums,'descending') // [21,11,3]
+    let sortNums =(ddd) => ddd.sort((a, b) => b - a)
+    let NS = sortNums(nums);
+    console.log(NS)
+</script>
+
+</body>
+</html>

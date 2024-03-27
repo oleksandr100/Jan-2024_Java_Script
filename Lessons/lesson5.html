@@ -9,21 +9,92 @@
 <script>
 
     // - створити функцію яка обчислює та повертає площу прямокутника зі сторонами а і б
-
+         const A1 = (a , b)=> a * b;
+         console.log(A1(6,8))
     // - створити функцію яка обчислює та повертає площу кола з радіусом r
-
+         const A2 = (pi ,r) =>pi * (r *r);
+         console.log(A2(2,3,4))
     // - створити функцію яка обчислює та повертає площу циліндру висотою h, та радіутом r
-
+       const A3 = (pi , h, r) => ( 2 * pi) * h * r;
+         console.log(A3(3.14,2,3))
     // - створити функцію яка приймає масив та виводить кожен його елемент
 
     // - створити функцію яка створює параграф з текстом. Текст задати через аргумент
+             let A4 = (text) =>{
+             document.write(`<p>${text}</p>`)
+             }
+             A4('Текст');
+
     // - створити функцію яка створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий
+      let A5 = (textx) => {
+          document.write(`<ul><li>${textx}</li><li>${textx}</li><li>${textx}</li>`)
+      }
+      A5('Привіт')
     // - створити функцію яка створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий. Кількість li визначається другим аргументом, який є числовим (тут використовувати цикл)
+          let A6 = ( text1 , count  ) => {
+          for ( let  f = 0; f < count; f++){
+              document.write(`<ul>`);
+              document.write(`<li> ${text1}</li>`);
+              document.write(`</Ul>`)
+          }
+    }
+      A6 ('Привіт я тут' ,2 )
     // - створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список
+    //         const Mass = (array) =>{
+    //       array.forEach((element) => {
+    //           console.log(element);
+    //           document.write(`<ul><li>${element}</li></ul>`);
+    //       })
+    //         }
+    //         Mass(elements);
     // - створити функцію яка приймає масив об'єктів з наступними полями id,name,age , та виводить їх в документ. Для кожного об'єкту окремий блок.
+         let data =[
+             { id:1, name: 'Діма' , age : 18 },
+             { id: 2, name: 'Саша' , age: 35 },
+         ]
+    let form = (data) => {
+             data.forEach((obj) => {
+                 for (const key in obj) {
+                     document.write(`<ul><li>${key} : ${obj[key]}</li></ul>`)
+                 }
+             })
+    }
+    form(data)
     // - створити функцію яка повертає найменьше число з масиву
+        const minX = (...numbers) => {
+          let min = numbers[0];
+          for (const number of numbers){
+              if (number < min){
+                  min = number ;
+              }
+          }
+          console.log('min:', min)
+        return min;
+
+    }
+    minX(34 ,5 ,32 ,9)
+
     // - створити функцію sum(arr)яка приймає масив чисел, сумує значення елементів масиву та повертає його. Приклад sum([1,2,10]) //->13
+        let numberX = [ 4 ,6, 8, 50]
+         const sum = (arr) =>{
+          let Symm = 0;
+           for (const arrNumber of arr){
+               Symm+= arrNumber
+           }
+           return Symm
+         }
+         let resultat = sum(numberX)
+    console.log(resultat)
+
     // - створити функцію swap(arr,index1,index2). Функція міняє місцями заняення у відаовідних індексах
+        let ind = [ 3,5,8,9]
+      const swap = (arr ,x6 ,x7) =>{
+          const SA = arr[x6];
+          arr[x6] = arr[x7];
+          arr[x7] = SA
+      };
+       swap(ind, 0 ,1)
+    console.log(ind)
     // Приклад  swap([11,22,33,44],0,1) //=> [22,11,33,44]
     // - Написати функцію обміну валюти exchange(sumUAH,currencyValues,exchangeCurrency)
     // Приклад exchange(10000,[{currency:'USD',value:40},{currency:'EUR',value:42}],'USD') // => 250
